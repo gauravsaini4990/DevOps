@@ -43,5 +43,16 @@
 	</dependencies>
 	<build>
 		<finalName>DevOpsTraining</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<packagingExcludes>WEB-INF/lib/el-api-*.jar</packagingExcludes>
+					<warName>web</warName>
+					<filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
